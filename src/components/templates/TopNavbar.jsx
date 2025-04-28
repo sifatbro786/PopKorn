@@ -10,8 +10,8 @@ export default function TopNavbar() {
     useEffect(() => {
         const getSearchResult = async () => {
             try {
-                const response = await api(`/search/multi?query=${query}`);
-                setSearches(response.data?.results);
+                const { data } = await api(`/search/multi?query=${query}`);
+                setSearches(data?.results);
             } catch (err) {
                 console.log(err.message);
             }
@@ -20,7 +20,7 @@ export default function TopNavbar() {
     }, [query]);
 
     return (
-        <div className="relative w-full h-[10vh] flex justify-start ml-[20%] items-center">
+        <div className="relative w-full h-[10vh] flex justify-start ml-[20%] items-center font-inter">
             <i className="text-zinc-400 text-3xl ri-search-line"></i>
 
             {/* //! search */}
@@ -38,7 +38,7 @@ export default function TopNavbar() {
                 ></i>
             )}
 
-            <div className="absolute w-1/2 max-h-[50vh] bg-zinc-200 top-[96%] left-[5.2%] overflow-auto rounded">
+            <div className="absolute w-1/2 max-h-[50vh] bg-zinc-200 top-[100%] left-[5.2%] overflow-auto rounded">
                 {searches &&
                     searches.map((item) => (
                         <Link
