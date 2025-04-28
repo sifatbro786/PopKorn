@@ -5,7 +5,7 @@ export default function App() {
     return (
         <div className="bg-primary w-screen h-screen flex">
             <Routes>
-                <Route path="/" element={<Home />} exact /> 
+                <Route path="/" element={<Home />} exact />
             </Routes>
         </div>
     );
