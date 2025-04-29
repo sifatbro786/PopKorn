@@ -10,7 +10,7 @@ export default function Header({ data }) {
             }}
             className="w-full h-[50vh] bg-no-repeat bg-center bg-cover flex flex-col justify-end items-start p-[5%] font-inter"
         >
-            <h1 className="w-[60%] text-5xl font-black  font-raleway">
+            <h1 className="w-[70%] text-5xl font-black  font-raleway">
                 {data?.name || data?.title || data?.original_name || data?.original_title}
             </h1>
             <p className="w-[60%]  my-3">

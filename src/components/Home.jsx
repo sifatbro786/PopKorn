@@ -3,9 +3,14 @@ import SideNavbar from "./templates/SideNavbar";
 import TopNavbar from "./templates/TopNavbar";
 import api from "../utils/axios";
 import Header from "./templates/Header";
+import HorizontalCards from "./templates/HorizontalCards";
+import Dropdown from "./templates/Dropdown";
+import Loader from "./Loader";
 
 export default function Home() {
     const [wallpaper, setWallpaper] = useState(null);
+    const [trending, setTrending] = useState(null);
+    const [category, setCategory] = useState("all");
 
     useEffect(() => {
         const getSearchResult = async () => {
@@ -18,20 +23,51 @@ export default function Home() {
                 console.log(err.message);
             }
         };
-        getSearchResult();
-    }, []);
+        !wallpaper && getSearchResult();
+    }, [wallpaper]);
 
-    return wallpaper ? (
+    useEffect(() => {
+        const getTrending = async () => {
+            try {
+                const { data } = await api(`/trending/${category}/day`);
+
+                setTrending(data?.results);
+            } catch (err) {
+                console.log(err.message);
+            }
+        };
+        getTrending();
+    }, [category]);
+
+    return wallpaper && trending ? (
         <>
             <title>PopKorn | Home</title>
+            <div className="flex w-full">
+                <div className="w-[20%] h-full p-9 font-inter">
+                    <SideNavbar />
+                </div>
 
-            <SideNavbar />
-            <div className="w-[80%] h-full">
-                <TopNavbar />
-                <Header data={wallpaper} />
+                <div className="w-[1px] bg-zinc-400 h-full" />
+
+                <div className="w-[80%] h-full text-white">
+                    <TopNavbar />
+                    <Header data={wallpaper} />
+
+                    <div className="my-5 px-5 flex justify-between items-center">
+                        <h1 className="text-3xl font-semibold text-zinc-400">Trending</h1>
+
+                        <Dropdown
+                            title={"Filter"}
+                            options={["tv", "movie", "all"]}
+                            onCategory={(e) => setCategory(e.target.value)}
+                        />
+                    </div>
+
+                    <HorizontalCards data={trending} />
+                </div>
             </div>
         </>
     ) : (
-        <h1>Loading...</h1>
+        <Loader />
     );
 }
