@@ -40,7 +40,11 @@ export default function TopNavbar({ left }) {
 
             <div
                 className={`absolute w-[40%] max-h-[50vh] bg-zinc-200 top-[100%] ${
-                    left === "home" ? "left-[24%]" : "left-[26%]"
+                    left === "home"
+                        ? "left-[24%]"
+                        : left === "trending"
+                        ? "left-[31%]"
+                        : "left-[26%]"
                 } overflow-auto rounded`}
             >
                 {searches &&

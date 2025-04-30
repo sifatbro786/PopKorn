@@ -58,7 +58,7 @@ export default function Trending() {
                     </h1>
 
                     <div className="flex items-center w-[90%]">
-                        <TopNavbar />
+                        <TopNavbar left={'trending'} />
                         <div className="flex gap-4">
                             <Dropdown
                                 title={"Category"}
