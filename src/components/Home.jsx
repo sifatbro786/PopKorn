@@ -12,6 +12,7 @@ export default function Home() {
     const [trending, setTrending] = useState(null);
     const [category, setCategory] = useState("all");
 
+    //* getSearchResult:
     useEffect(() => {
         const getSearchResult = async () => {
             try {
@@ -26,6 +27,7 @@ export default function Home() {
         !wallpaper && getSearchResult();
     }, [wallpaper]);
 
+    //* getTrendingMovies:
     useEffect(() => {
         const getTrending = async () => {
             try {
@@ -50,7 +52,7 @@ export default function Home() {
                 <div className="w-[1px] bg-zinc-400 h-full" />
 
                 <div className="w-[80%] h-full text-white">
-                    <TopNavbar />
+                    <TopNavbar left={"home"} />
                     <Header data={wallpaper} />
 
                     <div className="my-5 px-5 flex justify-between items-center">
@@ -59,7 +61,7 @@ export default function Home() {
                         <Dropdown
                             title={"Filter"}
                             options={["tv", "movie", "all"]}
-                            onCategory={(e) => setCategory(e.target.value)}
+                            handleChange={(e) => setCategory(e.target.value)}
                         />
                     </div>
 

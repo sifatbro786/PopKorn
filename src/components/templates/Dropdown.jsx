@@ -1,7 +1,7 @@
-export default function Dropdown({ title, options, onCategory }) {
+export default function Dropdown({ title, options, handleChange }) {
     return (
         <div className="select">
-            <select name="format" id="format" defaultValue={0} onChange={onCategory}>
+            <select name="format" id="format" defaultValue={0} onChange={handleChange}>
                 <option value="0" disabled>
                     {title}
                 </option>

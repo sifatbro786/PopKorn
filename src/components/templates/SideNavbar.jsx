@@ -18,7 +18,10 @@ export default function SideNavbar() {
                 >
                     <i className="ri-fire-fill"></i> Trending
                 </Link>
-                <Link className="hover:bg-secondary hover: duration-300 rounded-lg p-5">
+                <Link
+                    to="/popular"
+                    className="hover:bg-secondary hover: duration-300 rounded-lg p-5"
+                >
                     <i className="ri-bard-fill"></i> Popular
                 </Link>
                 <Link className="hover:bg-secondary hover: duration-300 rounded-lg p-5">

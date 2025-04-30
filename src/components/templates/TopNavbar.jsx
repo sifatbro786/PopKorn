@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import api from "../../utils/axios";
 import noImage from "../../assets/noImage.jpg";
 
-export default function TopNavbar() {
+export default function TopNavbar({ left }) {
     const [query, setQuery] = useState("");
     const [searches, setSearches] = useState([]);
 
@@ -38,7 +38,11 @@ export default function TopNavbar() {
                 ></i>
             )}
 
-            <div className="absolute w-[40%] max-h-[50vh] bg-zinc-200 top-[100%] left-[26%] overflow-auto rounded">
+            <div
+                className={`absolute w-[40%] max-h-[50vh] bg-zinc-200 top-[100%] ${
+                    left === "home" ? "left-[26%]" : "left-[29%]"
+                } overflow-auto rounded`}
+            >
                 {searches &&
                     searches.map((item) => (
                         <Link

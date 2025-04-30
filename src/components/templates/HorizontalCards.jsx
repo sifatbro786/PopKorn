@@ -10,7 +10,7 @@ export default function HorizontalCards({ data }) {
                         <img
                             className="w-full h-[55%] object-cover rounded-t-sm"
                             src={`https://image.tmdb.org/t/p/original/${
-                                item?.backdrop_path || item?.poster_path
+                                item?.poster_path || item?.backdrop_path
                             }`}
                             alt={item?.name || item?.title}
                         />
