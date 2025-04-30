@@ -18,8 +18,8 @@ export default function App() {
                 <Route path="/movies" element={<Movies />} />
                 <Route path="/tvShows" element={<TvShows />} />
                 <Route path="/people" element={<People />} />
-                <Route path="/people" element={<About />} />
-                <Route path="/people" element={<Contact />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
             </Routes>
         </div>
     );
