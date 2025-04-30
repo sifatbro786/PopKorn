@@ -27,7 +27,7 @@ export default function TopNavbar({ left }) {
             <input
                 onChange={(e) => setQuery(e.target.value)}
                 value={query}
-                className="w-1/2 text-zinc-200 mx-10 p-5 text-xl outline-none bg-transparent border-none"
+                className="w-1/2 text-zinc-200 mx-4 p-5 text-xl outline-none bg-transparent border-none"
                 type="text"
                 placeholder="search your favorite movie"
             />
@@ -40,7 +40,7 @@ export default function TopNavbar({ left }) {
 
             <div
                 className={`absolute w-[40%] max-h-[50vh] bg-zinc-200 top-[100%] ${
-                    left === "home" ? "left-[26%]" : "left-[29%]"
+                    left === "home" ? "left-[24%]" : "left-[26%]"
                 } overflow-auto rounded`}
             >
                 {searches &&

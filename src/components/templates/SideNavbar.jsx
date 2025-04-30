@@ -24,13 +24,19 @@ export default function SideNavbar() {
                 >
                     <i className="ri-bard-fill"></i> Popular
                 </Link>
-                <Link className="hover:bg-secondary hover: duration-300 rounded-lg p-5">
+                <Link
+                    to="/movies"
+                    className="hover:bg-secondary hover: duration-300 rounded-lg p-5"
+                >
                     <i className="ri-movie-fill"></i> Movies
                 </Link>
-                <Link className="hover:bg-secondary hover: duration-300 rounded-lg p-5">
+                <Link
+                    to="tvShows"
+                    className="hover:bg-secondary hover: duration-300 rounded-lg p-5"
+                >
                     <i className="ri-tv-fill"></i> Tv Shows
                 </Link>
-                <Link className="hover:bg-secondary hover: duration-300 rounded-lg p-5">
+                <Link to="people" className="hover:bg-secondary hover: duration-300 rounded-lg p-5">
                     <i className="ri-team-fill"></i> People
                 </Link>
             </nav>
@@ -39,10 +45,13 @@ export default function SideNavbar() {
 
             <nav className="flex flex-col text-zinc-400 text-xl gap-2">
                 <h1 className=" font-semibold text-xl mt-10 text-white">Website Info</h1>
-                <Link className="hover:bg-secondary hover: duration-300 rounded-lg p-5">
+                <Link to="/about" className="hover:bg-secondary hover: duration-300 rounded-lg p-5">
                     <i className="ri-information-fill"></i> About
                 </Link>
-                <Link className="hover:bg-secondary hover: duration-300 rounded-lg p-5">
+                <Link
+                    to="/contact"
+                    className="hover:bg-secondary hover: duration-300 rounded-lg p-5"
+                >
                     <i className="ri-phone-fill"></i> Contact
                 </Link>
             </nav>
