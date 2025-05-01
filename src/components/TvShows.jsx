@@ -74,7 +74,7 @@ export default function TvShows() {
                     hasMore={hasMore}
                     loader={<h1 className="text-white">Loading...</h1>}
                 >
-                    <Cards data={tv} title={category} />
+                    <Cards data={tv} title="tv" />
                 </InfiniteScroll>
             </div>
         </>

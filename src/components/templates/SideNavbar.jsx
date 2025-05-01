@@ -25,18 +25,18 @@ export default function SideNavbar() {
                     <i className="ri-bard-fill"></i> Popular
                 </Link>
                 <Link
-                    to="/movies"
+                    to="/movie"
                     className="hover:bg-secondary hover: duration-300 rounded-lg p-5"
                 >
                     <i className="ri-movie-fill"></i> Movies
                 </Link>
                 <Link
-                    to="tvShows"
+                    to="/tv"
                     className="hover:bg-secondary hover: duration-300 rounded-lg p-5"
                 >
                     <i className="ri-tv-fill"></i> Tv Shows
                 </Link>
-                <Link to="people" className="hover:bg-secondary hover: duration-300 rounded-lg p-5">
+                <Link to="/person" className="hover:bg-secondary hover: duration-300 rounded-lg p-5">
                     <i className="ri-team-fill"></i> People
                 </Link>
             </nav>

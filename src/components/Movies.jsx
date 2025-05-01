@@ -74,7 +74,7 @@ export default function Movies() {
                     hasMore={hasMore}
                     loader={<h1 className="text-white">Loading...</h1>}
                 >
-                    <Cards data={movie} title={category} />
+                    <Cards data={movie} title="movie" />
                 </InfiniteScroll>
             </div>
         </>

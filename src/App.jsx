@@ -7,6 +7,9 @@ import TvShows from "./components/TvShows";
 import People from "./components/People";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import MovieDetails from "./components/MovieDetails";
+import TvDetails from "./components/TvDetails";
+import PersonDetails from "./components/PersonDetails";
 
 export default function App() {
     return (
@@ -15,9 +18,13 @@ export default function App() {
                 <Route path="/" element={<Home />} exact />
                 <Route path="/trending" element={<Trending />} />
                 <Route path="/popular" element={<Popular />} />
-                <Route path="/movies" element={<Movies />} />
-                <Route path="/tvShows" element={<TvShows />} />
-                <Route path="/people" element={<People />} />
+                <Route path="/movie" element={<Movies />} />
+                <Route path="/movie/details/:id" element={<MovieDetails />} />
+                <Route path="/tv" element={<TvShows />} />
+                <Route path="/tv/details/:id" element={<TvDetails />} />
+                <Route path="/person" element={<People />} />
+                <Route path="/person/details/:id" element={<PersonDetails />} />
+
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>

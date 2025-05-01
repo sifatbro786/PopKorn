@@ -31,8 +31,8 @@ export default function Contact() {
                             </h2>
                             <p>
                                 Got a question or suggestion? Reach out to us at{" "}
-                                <span className="text-red-400">solaimanislamsifat@gmail.com</span> and we’ll
-                                get back to you soon.
+                                <span className="text-red-400">solaimanislamsifat@gmail.com</span>{" "}
+                                and we’ll get back to you soon.
                             </p>
                         </div>
 
@@ -42,8 +42,8 @@ export default function Contact() {
                             </h2>
                             <p>
                                 We’re online from{" "}
-                                <span className="text-red-400">Monday to Friday, 9am–6pm</span>. Our
-                                support ninjas are ready to help you!
+                                <span className="text-red-400">Saturday to Thursday, 9am–6pm</span>.
+                                Our support ninjas are ready to help you!
                             </p>
                         </div>
 
@@ -53,8 +53,8 @@ export default function Contact() {
                             </h2>
                             <p>
                                 PopKorn HQ is based in{" "}
-                                <span className="text-red-400">Uttara, Dhaka, Bangladesh</span> — but we
-                                stream love and movies worldwide.
+                                <span className="text-red-400">Uttara, Dhaka, Bangladesh</span> —
+                                but we stream love and movies worldwide.
                             </p>
                         </div>
                     </div>

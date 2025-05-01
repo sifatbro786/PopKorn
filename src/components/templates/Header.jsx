@@ -15,7 +15,13 @@ export default function Header({ data }) {
             </h1>
             <p className="w-[60%]  my-3">
                 {data?.overview.slice(0, 200)} ...
-                <Link className="text-blue-400 font-bold"> more</Link>
+                <Link
+                    to={`/${data?.media_type}/details/${data?.id}`}
+                    className="text-blue-400 font-bold"
+                >
+                    {" "}
+                    more
+                </Link>
             </p>
             <p>
                 <i className="text-yellow-500 ri-megaphone-fill" />{" "}
