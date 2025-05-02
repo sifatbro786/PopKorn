@@ -166,7 +166,7 @@ export default function MovieDetails() {
             {/* //? recommendations */}
             <div className="mt-10">
                 <hr className="mb-5 border-none h-[1px] bg-zinc-400" />
-                <h1 className="text-2xl mb-3 font-semibold">Recommendations & Similar Stuff</h1>
+                <h1 className="text-2xl mb-3 font-semibold">Recommendations & Similar</h1>
                 <HorizontalCards
                     data={info?.recommendations.length > 0 ? info?.recommendations : info?.similar}
                 />
