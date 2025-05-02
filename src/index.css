@@ -14,11 +14,8 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: black;
-    border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
     background: var(--color-secondary);
+    border-radius: 4px;
 }
 
 select {

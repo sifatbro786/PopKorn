@@ -7,8 +7,11 @@ export default function Header({ data }) {
                 background: `linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.5), rgba(0,0,0,.7)), url(https://image.tmdb.org/t/p/original/${
                     data?.backdrop_path || data?.poster_path
                 })`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
             }}
-            className="w-full h-[50vh] bg-no-repeat bg-center bg-cover flex flex-col justify-end items-start p-[5%] font-inter"
+            className="w-full h-[50vh] flex flex-col justify-end items-start p-[5%] font-inter"
         >
             <h1 className="w-[70%] text-5xl font-black  font-raleway">
                 {data?.name || data?.title || data?.original_name || data?.original_title}

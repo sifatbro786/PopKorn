@@ -65,7 +65,9 @@ export default function Home() {
                         />
                     </div>
 
-                    <HorizontalCards data={trending} />
+                    <div className="p-5">
+                        <HorizontalCards data={trending} />
+                    </div>
                 </div>
             </div>
         </>

@@ -39,17 +39,18 @@ export default function TopNavbar({ left }) {
             )}
 
             <div
-                className={`absolute w-[40%] max-h-[50vh] bg-zinc-200 top-[100%] ${
+                className={`absolute w-[40%] max-h-[50vh] bg-zinc-200 top-[100%] overflow-auto rounded z-20 ${
                     left === "home"
                         ? "left-[24%]"
                         : left === "trending"
                         ? "left-[31%]"
                         : "left-[26%]"
-                } overflow-auto rounded`}
+                }`}
             >
                 {searches &&
                     searches.map((item) => (
                         <Link
+                            to={`/${item?.media_type}/details/${item?.id}`}
                             key={item.id}
                             className="font-semibold text-zinc-600 p-10 w-full flex justify-start items-center border-b-2 border-zinc-100 hover:text-black hover:bg-zinc-300 duration-300"
                         >
