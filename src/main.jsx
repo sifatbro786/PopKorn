@@ -7,7 +7,6 @@ import { Provider } from "react-redux";
 import store from "./store/store.js";
 
 import "remixicon/fonts/remixicon.css";
-import "react-loading-skeleton/dist/skeleton.css";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>

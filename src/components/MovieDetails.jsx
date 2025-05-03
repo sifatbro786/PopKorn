@@ -5,7 +5,6 @@ import { asyncLoadMovie, removeMovie } from "../store/actions/movieAction";
 import Loader from "./Loader";
 import noImage from "../assets/noImage.jpg";
 import HorizontalCards from "./templates/HorizontalCards";
-import Portal from "./templates/Portal";
 
 export default function MovieDetails() {
     const navigate = useNavigate();
