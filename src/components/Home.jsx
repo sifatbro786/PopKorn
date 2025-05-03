@@ -55,8 +55,8 @@ export default function Home() {
                     <TopNavbar left={"home"} />
                     <Header data={wallpaper} />
 
-                    <div className="my-5 px-5 flex justify-between items-center">
-                        <h1 className="text-3xl font-semibold text-zinc-400">Trending</h1>
+                    <div className="mt-5 px-5 flex justify-between items-center">
+                        <h1 className="text-2xl font-bold text-zinc-400">Trending</h1>
 
                         <Dropdown
                             title={"Filter"}

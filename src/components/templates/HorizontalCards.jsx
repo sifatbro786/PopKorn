@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function HorizontalCards({ data, pathName }) {
     return (
-        <div className="w-full h-[40vh] mb-5">
+        <div className="w-full h-[40vh]">
             <div className="w-full flex gap-5 overflow-y-hidden overflow-x-auto">
                 {data.length > 0 ? (
                     data.map((item) => (

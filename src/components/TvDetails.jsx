@@ -13,7 +13,6 @@ export default function TvDetails() {
 
     const dispatch = useDispatch();
     const { info } = useSelector((state) => state.tv);
-    console.log(info);
 
     const specificPath = pathname.includes("movie") ? "movie" : "tv";
 
@@ -33,7 +32,7 @@ export default function TvDetails() {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
             }}
-            className="relative w-screen h-full px-[10%] py-1 "
+            className="relative w-screen h-full px-[10%] pt-1 pb-20"
         >
             <nav className="w-full h-[10vh] text-zinc-300 flex items-center gap-10 text-[22px]">
                 <Link>
@@ -59,6 +58,9 @@ export default function TvDetails() {
                     imdb
                 </Link>
             </nav>
+
+            {/* //? Modal */}
+            <Outlet />
 
             {/* //? poster */}
             <div className="w-full pl-1 mt-2 flex items-center">
@@ -204,8 +206,6 @@ export default function TvDetails() {
                     data={info?.recommendations.length > 0 ? info?.recommendations : info?.similar}
                 />
             </div>
-
-            <Outlet />
         </div>
     ) : (
         <Loader />

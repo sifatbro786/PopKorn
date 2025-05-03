@@ -7,7 +7,7 @@ const store = configureStore({
     reducer: {
         movie: movieReducer,
         tv: tvReducer,
-        people: peopleReducer,
+        person: peopleReducer,
     },
 });
 

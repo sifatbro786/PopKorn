@@ -21,6 +21,7 @@ export default function Trailer() {
 
             {ytVideo ? (
                 <ReactPlayer
+                    controls
                     height={700}
                     width={1400}
                     url={`https://www.youtube.com/watch?v=${ytVideo?.key}`}

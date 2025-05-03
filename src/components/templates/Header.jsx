@@ -31,7 +31,12 @@ export default function Header({ data }) {
                 {data?.release_date || "No Information"}
                 <i className="text-yellow-500 ri-album-fill ml-3" /> {data?.media_type}
             </p>
-            <Link className="bg-secondary mt-5 p-4 rounded-sm">Watch Trailer</Link>
+            <Link
+                to={`/${data?.media_type}/details/${data?.id}/trailer`}
+                className="bg-secondary mt-5 p-4 rounded-sm"
+            >
+                Watch Trailer
+            </Link>
         </div>
     );
 }

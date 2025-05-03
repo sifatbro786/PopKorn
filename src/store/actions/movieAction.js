@@ -1,6 +1,5 @@
 import api from "../../utils/axios";
 import { loadMovie } from "../reducers/movieSlice";
-
 export { removeMovie } from "../reducers/movieSlice";
 
 export const asyncLoadMovie = (id) => async (dispatch) => {

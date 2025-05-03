@@ -13,7 +13,8 @@ export default function MovieDetails() {
 
     const dispatch = useDispatch();
     const { info } = useSelector((state) => state.movie);
-    console.log(info);
+
+    const specificPath = pathname.includes("movie") ? "movie" : "tv";
 
     useEffect(() => {
         dispatch(asyncLoadMovie(id));
@@ -31,7 +32,7 @@ export default function MovieDetails() {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
             }}
-            className="relative w-screen h-full px-[10%] py-1 "
+            className="relative w-screen h-full px-[10%] pt-1 pb-20"
         >
             <nav className="w-full h-[10vh] text-zinc-300 flex items-center gap-10 text-[22px]">
                 <Link>
@@ -57,6 +58,9 @@ export default function MovieDetails() {
                     imdb
                 </Link>
             </nav>
+
+            {/* //? Modal */}
+            <Outlet />
 
             {/* //? poster */}
             <div className="w-full pl-1 mt-2 flex items-center">
@@ -169,10 +173,9 @@ export default function MovieDetails() {
                 <h1 className="text-2xl mb-3 font-semibold">Recommendations & Similar</h1>
                 <HorizontalCards
                     data={info?.recommendations.length > 0 ? info?.recommendations : info?.similar}
+                    pathName={specificPath}
                 />
             </div>
-
-            <Outlet />
         </div>
     ) : (
         <Loader />
