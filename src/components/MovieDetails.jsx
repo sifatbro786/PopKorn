@@ -5,6 +5,7 @@ import { asyncLoadMovie, removeMovie } from "../store/actions/movieAction";
 import Loader from "./Loader";
 import noImage from "../assets/noImage.jpg";
 import HorizontalCards from "./templates/HorizontalCards";
+import Portal from "./templates/Portal";
 
 export default function MovieDetails() {
     const navigate = useNavigate();
@@ -66,9 +67,6 @@ export default function MovieDetails() {
                         imdb
                     </Link>
                 </nav>
-
-                {/* //? Modal */}
-                <Outlet />
 
                 {/* //? poster */}
                 <div className="w-full pl-1 mt-2 flex items-center">
@@ -186,6 +184,9 @@ export default function MovieDetails() {
                         pathName={specificPath}
                     />
                 </div>
+
+                {/* //? Modal */}
+                <Outlet />
             </div>
         </>
     ) : (

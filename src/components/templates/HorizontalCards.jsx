@@ -18,7 +18,7 @@ export default function HorizontalCards({ data, pathName }) {
                                 }`}
                                 alt={item?.name || item?.title}
                             />
-                            <div className="w-full p-3 h-[45%]">
+                            <div className="w-full p-3 h-[45%] overflow-y-auto">
                                 <h1 className="text-lg font-semibold">
                                     {(
                                         item?.name ||
