@@ -45,6 +45,7 @@ export default function Popular() {
     return popular.length > 0 ? (
         <>
             <title>PopKorn | Popular</title>
+
             <div className="w-full h-full mt-2 mb-5 font-inter px-[2%]">
                 <div className="w-full flex items-center justify-between gap-1">
                     <h1 className="text-2xl font-semibold text-zinc-400">

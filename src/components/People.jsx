@@ -43,6 +43,7 @@ export default function People() {
     return people.length > 0 ? (
         <>
             <title>PopKorn | People</title>
+
             <div className="w-full h-full mt-2 mb-5 font-inter px-[2%]">
                 <div className="w-full flex items-center justify-between gap-1">
                     <h1 className="text-2xl font-semibold text-zinc-400">

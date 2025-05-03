@@ -45,6 +45,7 @@ export default function Movies() {
     return movie.length > 0 ? (
         <>
             <title>PopKorn | Movies</title>
+
             <div className="w-full h-full pt-2 mb-5 font-inter px-[2%]">
                 <div className="w-full flex items-center justify-between gap-1">
                     <h1 className="text-2xl font-semibold text-zinc-400">

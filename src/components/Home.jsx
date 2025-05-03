@@ -44,6 +44,7 @@ export default function Home() {
     return wallpaper && trending ? (
         <>
             <title>PopKorn | Home</title>
+
             <div className="flex w-full">
                 <div className="w-[20%] h-full p-9 font-inter">
                     <SideNavbar />

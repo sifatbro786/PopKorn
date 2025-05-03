@@ -47,6 +47,7 @@ export default function Trending() {
     return trending.length > 0 ? (
         <>
             <title>PopKorn | Trending</title>
+
             <div className="w-full h-full mt-2 mb-5 font-inter px-[2%]">
                 <div className="w-full flex items-center justify-between gap-1">
                     <h1 className="text-2xl font-semibold text-zinc-400">
@@ -58,7 +59,7 @@ export default function Trending() {
                     </h1>
 
                     <div className="flex items-center w-[90%]">
-                        <TopNavbar left={'trending'} />
+                        <TopNavbar left={"trending"} />
                         <div className="flex gap-4">
                             <Dropdown
                                 title={"Category"}
