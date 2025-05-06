@@ -5,7 +5,7 @@ export default function HorizontalCards({ data, pathName }) {
         <div className="w-full h-[40vh]">
             <div className="w-full flex gap-5 overflow-y-hidden overflow-x-auto">
                 {data.length > 0 ? (
-                    data.map((item) => (
+                    data.slice(1).map((item) => (
                         <Link
                             to={`/${item?.media_type || pathName}/details/${item?.id}`}
                             key={item?.id}
